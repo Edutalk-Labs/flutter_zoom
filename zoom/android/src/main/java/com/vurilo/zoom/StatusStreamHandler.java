@@ -34,6 +34,11 @@ public class StatusStreamHandler implements EventChannel.StreamHandler {
 
                 events.success(getMeetingStatusMessage(meetingStatus));
             }
+
+            @Override
+            public void onMeetingParameterNotification(MeetingParameter meetingParameter) {
+
+            }
         };
 
         this.meetingService.addListener(statusListener);
